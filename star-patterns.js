@@ -106,7 +106,7 @@ while (row3n > 0) {
   row3n = row3n - 1;
 }
 
-// STAR PATTERN 4
+// STAR PATTERN 4 !!!!!!
 //  12345
 //1     ***** //1-5
 //2    *****  //2-4
