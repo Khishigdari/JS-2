@@ -106,31 +106,90 @@ while (row3n > 0) {
   row3n = row3n - 1;
 }
 
-// STAR PATTERN 4 !!!!!!
-//  12345
-//1     ***** //1-5
-//2    *****  //2-4
-//3   *****   //3-3
-//4  *****    //4-2
-//5 *****     //5-1
+// STAR PATTERN 4
+//  01234
+//0     ***** //0-4
+//1    *****  //1-3
+//2   *****   //2-2
+//3  *****    //3-1
+//4 *****     //4-0
 
 let size4 = 5;
-let row4 = 1;
-while (row4 <= size4) {
-  let column = 1;
-  let result = "";
-  while (column <= size4) {
-    result = result + "* ";
-    column = column + 1;
+for (i = size4; i > 0; i--) {
+  let stars = "";
+  for (j = i; j > 0; j--) {
+    stars += " ";
   }
-  let starCount = column - 1 - row4;
-  while (starCount > 0) {
-    result = result + "-";
-    starCount = starCount - 1;
-    // column = 0;
+  for (j = size4; j > 0; j--) {
+    stars += "*";
   }
-  console.log(result);
-  row4 = row4 + 1;
+  console.log(stars);
+}
+
+// STAR PATTERN 5
+//  01234
+//0     *****
+//1    *   *
+//2   *   *
+//3  *   *
+//4 *****
+
+let size5 = 5;
+for (i = 0; i < size5; i++) {
+  let stars = "";
+  for (j = 0; j < size5 - i; j++) {
+    stars += " ";
+  }
+  for (j = 0; j < size5; j++) {
+    if (i == 0 || i == size5 - 1 || j == 0 || j == size5 - 1) {
+      stars += "*";
+    } else {
+      stars += " ";
+    }
+  }
+  console.log(stars);
+}
+
+// STAR PATTERN 6
+// *****
+//  *****
+//   *****
+//    *****
+//     *****
+
+let size6 = 5;
+for (i = 0; i < size6; i++) {
+  let stars = "";
+  for (j = 0; j < i; j++) {
+    stars += " ";
+  }
+  for (j = 0; j < size6; j++) {
+    stars += "*";
+  }
+  console.log(stars);
+}
+
+// STAR PATTERN 7
+//0 *****
+//1  *   *
+//2   *   *
+//3    *   *
+//4     *****
+
+let size1 = 5;
+for (i = 0; i < size1; i++) {
+  let stars = "";
+  for (j = 0; j < i; j++) {
+    stars += " ";
+  }
+  for (j = 0; j < size1; j++) {
+    if (i == 0 || i == size1 - 1 || j == 0 || j == size1 - 1) {
+      stars += "*";
+    } else {
+      stars += " ";
+    }
+  }
+  console.log(stars);
 }
 
 // STAR PATTERN 8
@@ -182,6 +241,27 @@ while (row9 <= size9) {
   row9 = row9 + 1;
 }
 
+// STAR PATTERN 10
+//  12345
+//1 *
+//2 **
+//3 * *
+//4 *  *
+//5 *****
+
+let size10 = 5;
+for (let i = 1; i <= size10; i++) {
+  let star = "";
+  for (let j = 1; j <= i; j++) {
+    if (j == 1 || i == size10 || j == i || j == size10) {
+      star += "*";
+    } else {
+      star += " ";
+    }
+  }
+  console.log(star);
+}
+
 // STAR PATTERN 11
 // *****
 // ****
@@ -200,4 +280,22 @@ while (row11 > 0) {
   }
   console.log(result);
   row11 = row11 - 1;
+}
+
+// STAR PATTERN 12
+//  12345
+//1 *****
+//2  ****
+//3   ***
+//4    **
+//5     *
+
+let size12 = 5;
+for (i = 1; i <= size12; i++) {
+  let star = "";
+  for (j = 1; j <= i - 1; j++) {
+    star += "-";
+  }
+  for ()
+  console.log(star);
 }
